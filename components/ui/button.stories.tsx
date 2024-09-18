@@ -1,6 +1,6 @@
 import type { Meta, StoryObj  } from '@storybook/react';
 import { Button } from './button';
-
+import { action } from '@storybook/addon-actions';
 const meta : Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
@@ -18,7 +18,7 @@ export const Default: Story = {
     variant : "default",
     size : 'sm' ,
     disabled : false , 
-    onClick :() => console.log('default clicked'),
+    onClick : action('hi'),
     children : 'default btn' , 
     className : 'shadow-lg'
 }
